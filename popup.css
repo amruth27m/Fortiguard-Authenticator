@@ -1,0 +1,129 @@
+html {
+overflow: hidden;}
+
+body {
+margin: 0px;
+	background-size: cover;
+	background-clip: border-box;
+	background-image: url("download3.png"),url("download2.png");
+}
+
+h1 {
+  height: 100px;
+  width: 100%;
+  font-size: 26px;
+  color: white;
+  line-height: 150%;
+  box-sizing: border-box;
+  padding-top: 34px;
+  text-align: center;
+}
+h1::selection{
+		background-color:darkturquoise;
+}
+
+.form{
+animation: fadeinwidth 1s ;
+}
+form {
+  box-sizing: border-box;
+  width: 600px;
+  height:100px;
+  margin-bottom: 0px;
+}
+
+.userfield {
+width:200px;
+float: left;
+overflow: hidden;
+padding-bottom: 30px;
+
+
+}
+
+
+
+
+
+
+input {
+  margin: 40px 25px;
+  width: 142px;
+  height: 35px;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px #1abc9c;
+          transition: all 0.9s cubic-bezier(0.64, 0.09, 0.08, 1)0s;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background-blend-mode: overlay;
+  background-position: -180px 0;
+  background-size: 180px 100%;
+  background-repeat: no-repeat;
+
+  color: white;
+}
+
+input:focus{
+  box-shadow: border-box;
+  outline: none;
+  border: solid 2px;
+  border-radius: 2px;
+  border-color: darkturquoise;
+  font-weight:600;
+  color: darkturquoise;
+  background: white;
+  background-position: 0 0;
+  padding-left:10px;
+}
+
+button {
+  border: none;
+  background: #1abc9c;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 142px;
+  color: white;
+  margin-left: 25px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  animation:buttonwidth 1s ease-in-out;
+  opacity: 0.7;
+}
+button:hover, button:focus {
+
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+  opacity: 2;
+  background: darkturquoise;
+}
+button::selection{
+	background:darkturquoise;
+}
+
+input::selection {
+	background-color:darkturquoise;
+	color: white;
+}
+
+
+@keyframes fadeinwidth {
+from{ width: 0px;
+
+	 }
+to { width:600px;
+
+	}
+}
+@keyframes buttonwidth {
+	from{width: 10px;
+	margin-left:90px;
+	border-radius: 50%;
+	}
+to { width: 142px;
+	margin-left:25px;
+	border-radius: 3px;}}
+
+
+@keyframes fadeinheight {
+	from { height : 0px;}
+to { height : 100px;}}
