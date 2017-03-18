@@ -1,0 +1,19 @@
+{
+  "manifest_version":2,
+
+  "name":"NIT Calicut authenticator",
+  "description": "Extension to automatically login to the NITC network",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+ },
+ "permissions": [
+   "activeTab","storage"
+ ],
+ "content_scripts": [{
+   "matches": ["<all_urls>"],
+   "js": ["content.js"]
+   }]
+}
