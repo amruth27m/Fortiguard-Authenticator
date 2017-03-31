@@ -41,6 +41,18 @@ else {
 
 $('body').css('background-size','cover');
 
+$(document).keypress(function (e) {
+ var key = e.which;
+ if(key == 13)
+  {
+    $('#submit1').click();
+    $('#submit2').click();
+    $('#submit3').click();
+    return false;
+  }
+});
+
+
 document.getElementById('submit1').onclick = function save(){
 console.log("Submit1Worked");
 $username1 = document.getElementById('username1').value;
