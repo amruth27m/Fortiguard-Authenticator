@@ -1,8 +1,45 @@
 window.onload = function() {
 console.log("Hai");
-$background = Math.floor((Math.random()*5)+1);
-console.log($background);
-document.getElementsByTagName('body')[0].style.background = "url('download'+$background+'.png')";
+//$background = Math.floor((Math.random()*5)+1);
+//document.getElementsByTagName('body')[0].style.background = "url('download'+$background+'.png')";
+
+$flag = true;
+if($flag){
+  $('#status').attr('src','pos.png');
+}
+else {
+  $('#status').attr('src','neg.png');
+}
+
+
+$currentTime = new Date().getHours();
+console.log($currentTime)
+if ($currentTime >= 5 && $currentTime < 17) {
+  $('body').css('background',"url('morning.png')");
+}
+
+else if ($currentTime >= 7 && $currentTime <= 20) {
+
+        $('body').css('background',"url('evening.jpg')");
+        $('input').css('borderColor','red');
+        $('button').css('background','red');
+        $('input').on('focusout',function(){
+              $(this).css('color','white');
+        });
+        $('input').on('focus',function(){
+              $(this).css('color','red');
+        });
+        $('input').css('background','linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #FF0000 4%)');
+        $('input').css('border-bottom','solid 1px #FF0000');
+
+
+}
+
+else {
+        $('body').css('background',"url('night.png')");
+}
+
+$('body').css('background-size','cover');
 
 document.getElementById('submit1').onclick = function save(){
 console.log("Submit1Worked");
